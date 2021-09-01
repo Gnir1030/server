@@ -12,7 +12,7 @@
     nightDayHandler(this);
   ">
   <ol id="nav">
-    <li><a href="#!html" onclick="fetchPage('html')">html</a></li>
+    <li><a href="#!html" onclick="hashCall()">html</a></li>
     <li><a href="#!css" onclick="fetchPage('css')">css</a></li>
     <li><a href="#!javascript" onclick="fetchPage('javascript')">javascript</a></li>
   </ol>
@@ -27,11 +27,13 @@
       })
     });
   }
-  
-  if(location.hash){
-    fetchPage(location.hash.substr(2));
-  } else {
-    fetchPage('welcome');
+  function hashCall(){
+    if(location.hash){
+      fetchPage(location.hash.substr(2));
+    }
+    else {
+      fetchPage('welcome');
+    }
   }
   
   </script>
