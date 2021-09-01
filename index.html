@@ -26,16 +26,13 @@
         document.querySelector('article').innerHTML = text;
       })
     });
-  }
-  function hashCall(){
+  
     if(location.hash){
       fetchPage(location.hash.substr(2));
     }
     else {
       fetchPage('welcome');
     }
-  }
-  hashCall();
   
   </script>
 </body>
